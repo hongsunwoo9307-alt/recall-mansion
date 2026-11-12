@@ -1,5 +1,7 @@
 # Recall Mansion demo recording plan
 
+Completed November 13, 2026: [public English demonstration](https://youtu.be/umx3xHVfUm8), 117.86 seconds. The original plan below is preserved as preparation history. The final edited walkthrough uses real application and public Kiro source screenshots; its closing caption explicitly identifies a later capture after real time elapsed. No runtime state or elapsed time was fabricated.
+
 **Target: 115 seconds, English narration. This is a recording plan, not evidence of a completed video, passing tests, deployment, or submission.** Record only after the real application and the features below have been verified. Revise the script if the final implementation differs.
 
 ## Preparation
@@ -10,7 +12,7 @@
 
   > The Moon reflects sunlight rather than producing its own light. A lunar eclipse happens when Earth passes between the Sun and the Moon.
 
-- Open the actual project files before recording. Confirm Kiro attribution against the recorded development session and final files. The `dist/lib` implementation is still being completed at the time this plan is written.
+- Open the actual project files before recording. Confirm Kiro attribution against the recorded development session and final files. The `dist/lib` implementation was completed and verified before the final recording.
 - Record a readable browser viewport with visible pointer actions and English captions. Cuts may shorten navigation, but must not imply a state change that did not happen.
 
 ## Storyboard

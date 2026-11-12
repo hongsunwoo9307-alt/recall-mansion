@@ -8,6 +8,10 @@ A new project for **Kiroween 2026**, started November 12, 2026. Intended categor
 
 Source: [hongsunwoo9307-alt/recall-mansion](https://github.com/hongsunwoo9307-alt/recall-mansion). The public source package omits the owner's private hosting configuration; `dist/` contains the complete application and can be hosted independently.
 
+[Open the public web app](https://recall-mansion-hj.hongsunwoo9307.chatgpt.site/). No login is required. Desktop and mobile-sized browser layouts are supported; physical iOS/Android devices have not yet been tested.
+
+[Watch the 1:58 English demonstration](https://youtu.be/umx3xHVfUm8). The video is an edited walkthrough of actual application and Kiro source screens, with English captions and synthesized narration.
+
 ## Try the study flow
 
 1. Create a room and paste a note, or choose **Explore a sample**.
@@ -58,7 +62,7 @@ See [the contribution record](docs/KIRO-EVIDENCE.md), [the integration contract]
 
 ## Entry status
 
-The prototype is implemented and 73 core/storage tests pass. Participant registration was completed on November 13, 2026 (KST), with the owner's eligibility and terms confirmation. The initial hosted preview is for owner-only review. A judge-accessible release, public GitHub source, final English entry, and public demonstration video remain before final submission.
+The prototype is implemented and 73 core/storage tests pass. Participant registration was completed on November 13, 2026 (KST), with the owner's eligibility and terms confirmation. The application, complete GitHub source, and demonstration video are public. The English Devpost draft is saved through the final submission screen (4/5 steps). Final project submission remains separate.
 
 Official deadline: **December 5, 2026, 07:00 KST** (December 4, 14:00 PST). Competition details: [Kiroween](https://kiroween.devpost.com/), [official rules](https://kiroween.devpost.com/rules), and [resources](https://kiroween.devpost.com/resources).
 

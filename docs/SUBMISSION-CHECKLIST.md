@@ -1,6 +1,6 @@
 # Recall Mansion — submission checklist
 
-Prepared November 13, 2026 (Asia/Seoul). This checklist records evidence, not final submission. Participant registration is complete. The current request is to prepare the project for submission; the final Submit action remains separate.
+Prepared November 13, 2026 (Asia/Seoul). **Submission preparation is complete.** Participant registration is complete; the saved Devpost draft is ready for the final submission decision. This checklist does not claim final submission.
 
 ## Official requirements checked
 
@@ -20,26 +20,33 @@ Extra credits, a social post, and a blog post are optional; no additional credit
 | New project | README and steering record November 12, 2026 start; no ScopeGuard source reuse. |
 | Working implementation | Static application in `dist/`, with `serve.mjs` for local use. |
 | Core verification | 73 tests, 20 suites, 0 failures; `docs/VERIFICATION.md`. |
-| Browser verification | Note/card/review/persistence, sample preservation, export, invalid import gate, and narrow viewport observed; limits documented. |
+| Browser verification | Note/card/review/persistence, sample preservation, export, and invalid import gate verified. A valid backup with one room, one card, and one review enabled replacement; replacement was not performed. At a 390 × 844 browser viewport, create room → create card → Somewhat → Remembered → save → reload passed without horizontal overflow. |
 | Kiro use | Actual `.kiro/specs/recall-mansion/` documents, `dist/lib/`, tests, and `docs/KIRO-EVIDENCE.md`. |
 | Root `.kiro` | Present and not ignored by `.gitignore`. |
 | License | Root `LICENSE`: MIT, Hyenjun Hong, 2026. |
 | English copy | `docs/DEVPOST-ENTRY.md`; story, Kiro account, category rationale, testing instructions, and originality disclosure. |
-| Hosting | Owner-private deployment exists at https://recall-mansion-hj.hongsunwoo9307.chatgpt.site. |
+| Hosting | https://recall-mansion-hj.hongsunwoo9307.chatgpt.site — public audience confirmed; anonymous HTTP requests returned 200 for the root and `lib/core.js`. |
+| Public source | https://github.com/hongsunwoo9307-alt/recall-mansion — initial verified publication: 27 files at commit `02ed114be2f806b259442622a5909e36df598e16`; root `.kiro` and tests browsable, MIT detected. |
+| Devpost draft | Draft `1298833`; https://devpost.com/software/recall-mansion. Overview, details, and additional information saved. Preview verified with the English story, three screenshots, video, and app/source links. |
+| Public video | https://youtu.be/umx3xHVfUm8 — Public, 117.86 seconds, 1080p H.264/AAC. Actual playback and changing English captions verified in the Devpost embed. |
 
 ## Publication and submission gates
 
-- [ ] Publish the full repository on GitHub; verify public visibility, browsable root `.kiro`, readable source, and GitHub's detected MIT license.
-- [ ] Record the final public source URL in the Devpost draft and entry document.
-- [ ] Make the app accessible to judges and verify that access with the intended visitor permissions. Owner-only preview access is insufficient for an unauthenticated judge.
-- [ ] Finish the demonstration using the working application. Show note creation, exact phrase/card creation, confidence, answer reveal, rating, saved state, and the actual Kiro project files.
-- [ ] Verify video duration below 3:00, readable English narration/captions, real state changes, no secret/account exposure, and no unlicensed third-party media.
-- [ ] Upload to YouTube as Public, verify playback, and record its exact URL. A local MP4 or unlisted upload does not satisfy the public-video requirement.
-- [ ] Create/save the Devpost draft with title, pitch, story, technologies, category, app URL, GitHub URL, video URL, Kiro-use answer, and any remaining fields shown by the live form.
-- [ ] Inspect the saved preview and all links. Confirm that the video and copy describe only implemented features.
+- [x] Publish the full repository on GitHub; verify public visibility, browsable root `.kiro`, readable source, and GitHub's detected MIT license.
+- [x] Record the verified public source URL in the entry document.
+- [x] Save and verify the public source URL in the Devpost draft.
+- [x] Apply the owner's approved public audience and confirm Sites reports public access.
+- [x] Verify anonymous HTTP access to the hosted app and core module; verify the complete application flow in the browser.
+- [x] Finish the demonstration from eleven frames captured from the actual application and project files.
+- [x] Verify video duration below 3:00, English captions, and actual application content.
+- [x] Upload to YouTube as Public, verify playback, and record its exact URL. The live form permits public or unlisted videos; the published video is Public.
+- [x] Save the Devpost overview, project details, and additional information, including the app/source/video links and Kiro-use description.
+- [x] Inspect the saved preview, including its story, three screenshots, embedded video playback, and app/source links.
 - [ ] Present the complete entry for final submission approval, then verify Devpost's actual success state after submission.
 
-Exact custom question labels, limits, and required checkboxes still need inspection in the authenticated Devpost form; this document does not invent unseen form fields.
+The finalization page shows **4/5 steps complete**. This is the expected state with only the final submission step remaining: **Submit project** is available and the final terms checkbox is unchecked. Editor: https://devpost.com/submit-to/31667-kiroween-2026/manage/submissions/1298833-recall-mansion/project_details/edit
+
+Required organizer-only questions and eligibility confirmations were verified with the owner and saved in Devpost. Private response values are intentionally absent from this public checklist. The project category is **Costume Contest**, with no special bonus category.
 
 ## Accuracy notes for the final review
 
@@ -47,6 +54,6 @@ Exact custom question labels, limits, and required checkboxes still need inspect
 - Do not claim Kiro Crew, hooks, custom agents, MCP, Powers, or property-based tests. They were not used for this build.
 - There is no runtime AI question generator, cloud sync, objective memory scoring, or medically/scientifically validated scheduling model.
 - Notes use browser localStorage. Keep backups and use one editing tab. Failed persistence and invalid imports are reported without claiming a save.
-- Valid import round trips were tested at module level; the prior browser session verified the invalid-import gate and real export. If the video demonstrates valid replacement, perform and verify that actual browser action before describing it as complete.
-- Accessibility affordances are implemented, but a full accessibility audit and exhaustive browser coverage have not been completed.
+- Valid import round trips were tested at module level. Browser checks verified the invalid-import gate, real export, and validation of a one-room/one-card/one-review backup with the replacement button enabled. Browser replacement itself was not performed; do not describe it as completed.
+- The 390 × 844 test used a real browser with a narrow viewport, not a physical mobile device. Accessibility affordances are implemented, but a full accessibility audit and exhaustive browser coverage have not been completed.
 - Registration is complete; final project submission is not.

@@ -1,6 +1,6 @@
 # Recall Mansion — Devpost entry copy
 
-Prepared November 13, 2026 (Asia/Seoul) from the implemented application and recorded verification. Sections labeled as field copy can be pasted into Devpost. Publication checks and unfinished link fields are kept separately below.
+Prepared November 13, 2026 (Asia/Seoul) from the implemented application and recorded verification. The Devpost draft is saved and ready for the final submission decision. Sections labeled as field copy contain the English entry text; verified publication links and final form status appear below.
 
 ## Project name
 
@@ -48,7 +48,7 @@ Review caught an integration bug where backup metadata in local storage disrupte
 
 ### Accomplishments that I'm proud of
 
-The complete note-to-card-to-review flow works, with 73 automated core and storage tests passing. Browser checks confirmed persistence, the confidence-before-reveal flow, sample preservation, backup export, and rejection of an invalid import. The interface includes explicit status labels, keyboard focus, and reduced-motion styles, so the meaning of a ghost or lit window does not depend on color alone.
+The complete note-to-card-to-review flow works, with 73 automated core and storage tests passing. Browser checks confirmed persistence, the confidence-before-reveal flow, sample preservation, backup export, validation of a valid backup, and rejection of an invalid import. A 390 × 844 browser viewport also completed room and card creation, review, save, and reload without horizontal overflow. The interface includes explicit status labels, keyboard focus, and reduced-motion styles, so the meaning of a ghost or lit window does not depend on color alone.
 
 ### What I learned
 
@@ -100,9 +100,16 @@ No additional eligibility-based or publishing-based bonus is claimed by this dra
 
 | Field | Current verified value/status |
 | --- | --- |
-| Application | https://recall-mansion-hj.hongsunwoo9307.chatgpt.site — deployed; initially owner-private. Verify judge access before submitting this URL. |
-| Public GitHub source | Awaiting creation/publication and verification by the publishing workflow. |
-| Public YouTube demonstration | Awaiting finished video, public upload, and playback verification. |
-| Devpost draft | Awaiting creation and saved-field verification. |
+| Application | https://recall-mansion-hj.hongsunwoo9307.chatgpt.site — public; anonymous HTTP requests returned 200 for the root and `lib/core.js`. |
+| Public GitHub source | https://github.com/hongsunwoo9307-alt/recall-mansion — initial verified publication: 27 files at commit `02ed114be2f806b259442622a5909e36df598e16`; root `.kiro` and tests are browsable, and GitHub detects MIT. |
+| Public YouTube demonstration | https://youtu.be/umx3xHVfUm8 — published Public; 117.86 seconds, 1080p H.264/AAC. Playback and changing English captions were verified in the Devpost embed. |
+| Devpost draft preview | https://devpost.com/software/recall-mansion — overview, project details, and additional information saved. Preview verified with the English story, three screenshots, video, and app/source links. |
+| Devpost draft editor | https://devpost.com/submit-to/31667-kiroween-2026/manage/submissions/1298833-recall-mansion/project_details/edit |
 
-Do not paste the status notes into URL fields. Replace this table with the verified links when available. No final hackathon submission has been claimed here.
+The finalization page shows **4/5 steps complete**, which is expected with the final submission step remaining. **Submit project** is available and the final terms checkbox is unchecked. No final hackathon submission has been made.
+
+## Saved additional information
+
+The required organizer-only questions and eligibility confirmations were verified with the owner and saved in Devpost. Their private answers are not included in this public repository. The project enters **Costume Contest**, with no special bonus category.
+
+The live video field allows public or unlisted visibility; the published video is Public, satisfying the stricter wording of the official rules. Browser backup checks validated a file containing one room, one card, and one review and enabled replacement; replacement itself was not performed. Narrow-viewport testing used the browser's 390 × 844 viewport, not a physical mobile device.

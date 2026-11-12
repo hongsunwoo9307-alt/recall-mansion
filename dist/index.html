@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14151d">
+  <meta name="description" content="Give your notes a room. Turn the phrases you want to remember into review cards, and bring a little light back to your memory mansion.">
+  <title>Recall Mansion — Keep a light on for what you learn</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to your mansion</a>
+  <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <symbol id="icon-ghost" viewBox="0 0 32 32"><path d="M6 27V15a10 10 0 0 1 20 0v12l-5-3-5 3-5-3-5 3Z" fill="currentColor"/><ellipse cx="12" cy="14" rx="1.5" ry="2" fill="var(--ghost-eye, #242332)"/><ellipse cx="20" cy="14" rx="1.5" ry="2" fill="var(--ghost-eye, #242332)"/></symbol>
+      <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="icon-book" viewBox="0 0 24 24"><path d="M12 5c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1Zm0 0v15" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-export" viewBox="0 0 24 24"><path d="M12 15V3m-4 4 4-4 4 4M5 13v7h14v-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-import" viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-spark" viewBox="0 0 24 24"><path d="m12 3 2.1 6.9L21 12l-6.9 2.1L12 21l-2.1-6.9L3 12l6.9-2.1L12 3Z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Recall Mansion home">
+        <span class="brand-seal"><svg aria-hidden="true"><use href="#icon-ghost"/></svg></span>
+        <span>Recall<span class="brand-second">Mansion</span></span>
+      </a>
+      <nav class="header-actions" aria-label="Mansion tools">
+        <span class="local-note" id="storage-status"><span class="status-dot" aria-hidden="true"></span>On this device</span>
+        <button class="text-button" type="button" data-action="show-help">How it works</button>
+        <span class="nav-divider" aria-hidden="true"></span>
+        <button class="icon-button" type="button" id="export-backup" data-action="export-backup" aria-label="Export your notes and cards as a backup" title="Export backup" disabled><svg aria-hidden="true"><use href="#icon-export"/></svg></button>
+        <button class="icon-button" type="button" data-action="open-import" aria-label="Restore a backup" title="Restore backup"><svg aria-hidden="true"><use href="#icon-import"/></svg></button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="tiny-star" aria-hidden="true">✦</span> A quieter way to remember</p>
+          <h1 id="hero-title">Leave a light on<br>for what you <em>learn.</em></h1>
+          <p class="hero-description">Your notes have a home here. Give them a room,<br class="desktop-break"> revisit what matters, and keep forgetting at the door.</p>
+          <div class="hero-actions">
+            <button class="button button-primary" type="button" data-action="new-room"><svg aria-hidden="true"><use href="#icon-plus"/></svg>Create a room</button>
+            <button class="button button-quiet" type="button" id="load-sample" data-action="load-sample">Explore a sample <span aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+        <div class="hero-illustration" aria-hidden="true">
+          <svg class="mansion-illustration" viewBox="0 0 490 295" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="moon-glow"><stop stop-color="#c9b9f3" stop-opacity=".13"/><stop offset="1" stop-color="#c9b9f3" stop-opacity="0"/></radialGradient>
+              <linearGradient id="window-glow" x2="0" y2="1"><stop stop-color="#e6b96f"/><stop offset="1" stop-color="#95724b"/></linearGradient>
+              <linearGradient id="wall-shade" x2="0" y2="1"><stop stop-color="#292938"/><stop offset="1" stop-color="#1a1b25"/></linearGradient>
+            </defs>
+            <ellipse cx="317" cy="96" rx="128" ry="116" fill="url(#moon-glow)"/>
+            <path d="M331 29a35 35 0 1 0 27 56c-28 5-48-26-27-56Z" fill="#c6b9df" opacity=".8"/>
+            <g stroke="#b7aacb" stroke-linecap="round" opacity=".65"><path d="M126 74v10m-5-5h10M398 118v8m-4-4h8M259 27v6m-3-3h6M80 142v6m-3-3h6"/><circle cx="217" cy="63" r="1"/><circle cx="369" cy="39" r="1"/><circle cx="424" cy="79" r="1"/></g>
+            <path d="M104 266h296" stroke="#645269"/>
+            <path d="M143 266V152h96v114" fill="url(#wall-shade)" stroke="#5e5368"/>
+            <path d="m129 155 62-55 62 55H129Z" fill="#242332" stroke="#786581"/>
+            <path d="M208 266V122h106v144" fill="url(#wall-shade)" stroke="#6a5972"/>
+            <path d="m194 124 67-82 67 82H194Z" fill="#262532" stroke="#89718e"/>
+            <path d="M310 266V171h62v95" fill="url(#wall-shade)" stroke="#5e5368"/>
+            <path d="m301 173 39-44 42 44h-81Z" fill="#242332" stroke="#786581"/>
+            <path d="M255 83V62m-8 7h16M335 132v-15m-6 5h12" stroke="#8d7592" stroke-width="2"/>
+            <path d="M157 183a10 10 0 0 1 20 0v24h-20v-24ZM184 183a10 10 0 0 1 20 0v24h-20v-24Z" fill="#373347" stroke="#77627f"/>
+            <path d="M224 156a11 11 0 0 1 22 0v28h-22v-28ZM274 156a11 11 0 0 1 22 0v28h-22v-28Z" fill="url(#window-glow)" stroke="#e0ad70"/>
+            <path d="M235 147v37m-11-18h22M285 147v37m-11-18h22" stroke="#57443e"/>
+            <path d="M158 228a10 10 0 0 1 20 0v24h-20v-24Z" fill="url(#window-glow)" stroke="#c49866"/>
+            <path d="M168 219v33m-10-15h20" stroke="#57443e"/>
+            <path d="M328 199a11 11 0 0 1 22 0v29h-22v-29Z" fill="#373347" stroke="#77627f"/>
+            <path d="M244 266v-40a17 17 0 0 1 34 0v40h-34Z" fill="#11141d" stroke="#8d738c"/>
+            <path d="M261 213v53" stroke="#66556c"/><circle cx="267" cy="247" r="2" fill="#d4aa75"/>
+            <circle cx="261" cy="113" r="11" fill="#493a44" stroke="#b58a69"/><path d="M261 104v18m-9-9h18" stroke="#cda06b"/>
+            <path d="M234 267h54m-63 7h71m-81 7h90" stroke="#645269"/>
+            <path d="M119 265v-56m0 32-15-14m15 3 14-14M390 265v-64m0 33-17-14m17 1 15-16" stroke="#716073" stroke-width="2"/>
+            <g class="illustration-ghost"><path d="M361 112v-12a12 12 0 0 1 24 0v12l-6-4-6 4-6-4-6 4Z" fill="#c5b6e5"/><ellipse cx="369" cy="99" rx="1.5" ry="2" fill="#383144"/><ellipse cx="377" cy="99" rx="1.5" ry="2" fill="#383144"/></g>
+            <path d="M88 277c43-9 77-5 103-1m133 2c39-11 68-10 94-3" stroke="#514758" stroke-linecap="round" opacity=".7"/>
+          </svg>
+          <p class="illustration-caption"><span aria-hidden="true">✧</span> A little attention brings the light back.</p>
+        </div>
+      </section>
+
+      <div class="section-rule"><span>YOUR MEMORY, ROOM BY ROOM</span><span aria-hidden="true">✦</span></div>
+
+      <div class="mansion-layout">
+        <section class="rooms-section" aria-labelledby="rooms-heading">
+          <div class="section-heading">
+            <div><p class="eyebrow small-eyebrow">The mansion</p><h2 id="rooms-heading">Rooms to return to</h2></div>
+            <button class="round-button" type="button" data-action="new-room" aria-label="Create a new room"><svg aria-hidden="true"><use href="#icon-plus"/></svg></button>
+          </div>
+          <div class="mansion-stats" aria-label="Your study overview">
+            <span><strong id="room-count">0</strong> rooms</span><span><strong id="card-count">0</strong> cards kept</span><span><strong id="reviewed-count">0</strong> reviews completed</span>
+          </div>
+          <div id="rooms-grid" class="rooms-grid" aria-label="Your rooms"></div>
+          <div id="rooms-empty" class="rooms-empty">
+            <div class="empty-window" aria-hidden="true"><span></span><i></i><b>✦</b></div>
+            <p class="empty-eyebrow">Every mansion begins with one room</p>
+            <h3>A home for your next idea.</h3>
+            <p>Bring a note, a useful fact, or a lesson you want to keep.<br>We'll leave a place for it here.</p>
+            <button class="button button-outline" type="button" data-action="new-room">Create your first room <svg aria-hidden="true"><use href="#icon-arrow"/></svg></button>
+          </div>
+          <p class="room-key"><span><svg aria-hidden="true"><use href="#icon-ghost"/></svg>Ghosts mark cards due for review</span><span><i class="window-dot" aria-hidden="true"></i>Lit windows mean the room's queue is complete</span></p>
+        </section>
+
+        <aside class="review-desk" aria-labelledby="review-heading">
+          <div class="desk-topline"><span class="eyebrow small-eyebrow">The reading room</span><svg aria-hidden="true"><use href="#icon-spark"/></svg></div>
+          <h2 id="review-heading">A moment of recall.</h2>
+          <p class="desk-description">A few small returns make a<br>place feel familiar.</p>
+          <div class="due-display"><strong id="due-count">0</strong><span>cards waiting<br>for you</span><svg aria-hidden="true"><use href="#icon-ghost"/></svg></div>
+          <button id="start-review" class="button button-primary button-full" type="button" data-action="start-review" disabled>Begin a review <svg aria-hidden="true"><use href="#icon-arrow"/></svg></button>
+          <p id="review-availability" class="desk-helper">Create a card to begin your first review.</p>
+          <div class="desk-divider" aria-hidden="true"><span>✧</span></div>
+          <div class="second-look-heading"><h3>Worth a second look</h3><span id="overconfident-count" class="count-pill">0</span></div>
+          <p class="second-look-description">Cards you felt sure about, then chose to revisit.</p>
+          <p id="overconfident-summary" class="second-look-description" hidden></p>
+          <ul id="overconfident-list" class="second-look-list"></ul>
+          <p id="overconfident-empty" class="quiet-empty">Nothing here yet. Notice the surprises as you go.</p>
+        </aside>
+      </div>
+
+      <section class="method-note" aria-label="The study method">
+        <span class="method-number">01 — 02 — 03</span><p><strong>Keep a phrase. Try to recall it. Return in time.</strong><br>You choose the words. Your review decides when they return.</p><button type="button" class="text-button" data-action="show-help">The method <span aria-hidden="true">↗</span></button>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p><svg aria-hidden="true"><use href="#icon-ghost"/></svg>Recall Mansion <span>·</span> Keep what matters.</p><p>Your notes stay in this browser. <button class="inline-button" type="button" data-action="export-backup">Keep a backup.</button></p></footer>
+  </div>
+
+  <p id="app-status" class="toast" role="status" aria-live="polite" aria-atomic="true" hidden></p>
+  <div id="app-error" class="error-banner" role="alert" hidden></div>
+  <noscript><div class="noscript-notice">Recall Mansion needs JavaScript to save notes and schedule reviews. Enable it to use the app.</div></noscript>
+
+  <dialog id="new-room-dialog" class="modal" aria-labelledby="new-room-title">
+    <div class="modal-heading"><div><p class="eyebrow small-eyebrow">A new beginning</p><h2 id="new-room-title">Give a thought a room.</h2></div><button class="icon-button" type="button" data-action="close-dialog" aria-label="Close new room"><svg aria-hidden="true"><use href="#icon-close"/></svg></button></div>
+    <form id="new-room-form">
+      <label for="room-title-input">Room name</label><input id="room-title-input" name="title" maxlength="200" required placeholder="e.g. Things I learned about the ocean" autocomplete="off">
+      <label for="room-note-input">Your note</label><textarea id="room-note-input" name="note" rows="8" maxlength="20000" required placeholder="Paste something you want to remember…" aria-describedby="note-help"></textarea><p id="note-help" class="field-hint">Plain text, up to 20,000 characters. You'll choose which phrases to remember next.</p>
+      <p id="new-room-error" class="form-error" role="alert" hidden></p>
+      <div class="modal-actions"><button class="button button-quiet" type="button" data-action="close-dialog">Cancel</button><button class="button button-primary" type="submit">Create room <svg aria-hidden="true"><use href="#icon-arrow"/></svg></button></div>
+    </form>
+  </dialog>
+
+  <dialog id="room-dialog" class="modal modal-wide" aria-labelledby="room-dialog-title">
+    <div class="modal-heading"><div><p class="eyebrow small-eyebrow">Inside your room</p><h2 id="room-dialog-title">Your note</h2></div><button class="icon-button" type="button" data-action="close-dialog" aria-label="Close room"><svg aria-hidden="true"><use href="#icon-close"/></svg></button></div>
+    <div class="card-builder-layout">
+      <section class="source-note-section" aria-labelledby="source-note-heading"><h3 id="source-note-heading">Choose what stays.</h3><p class="field-hint">Highlight a phrase in your note, then use the selection. You can also enter a phrase on the right.</p><label class="sr-only" for="room-note">Your saved note; select a phrase to make a card</label><textarea id="room-note" readonly rows="11" spellcheck="false"></textarea><button class="button button-outline" id="use-selection" type="button" data-action="use-selection">Use selected phrase <svg aria-hidden="true"><use href="#icon-arrow"/></svg></button><p class="field-hint">Each card keeps its own copy of this note and answer.</p></section>
+      <form id="card-form" class="card-builder-form"><h3>A small question.</h3><label for="card-phrase">Phrase to remember</label><textarea id="card-phrase" name="phrase" required maxlength="500" rows="2" placeholder="An exact phrase from your note" autocomplete="off"></textarea><div class="occurrence-field"><label for="card-occurrence">Which occurrence?</label><input id="card-occurrence" name="occurrence" type="number" min="1" value="1" required inputmode="numeric" aria-describedby="occurrence-help"></div><p id="occurrence-help" class="field-hint">Use 1 for the first match, 2 for the second, and so on.</p><input id="selection-start" type="hidden" name="start"><input id="selection-end" type="hidden" name="end"><div class="card-preview"><p class="paper-label">Your card preview</p><p id="cloze-preview" class="cloze-text">Choose a phrase to see the question.</p><p class="answer-preview-label">Answer <span id="card-answer-preview">—</span></p></div><p id="card-error" class="form-error" role="alert" hidden></p><button class="button button-primary button-full" type="submit">Keep this card <svg aria-hidden="true"><use href="#icon-plus"/></svg></button></form>
+    </div>
+    <section class="room-cards-section" aria-labelledby="room-cards-heading"><div class="section-heading compact"><h3 id="room-cards-heading">Cards in this room</h3><button class="text-button" id="review-room" type="button" data-action="review-room" disabled>Review this room <span aria-hidden="true">↗</span></button></div><ul id="room-cards" class="saved-cards-list"></ul><p id="room-cards-empty" class="quiet-empty">No cards yet. Keep a phrase from the note to add the first one.</p></section>
+  </dialog>
+
+  <dialog id="review-dialog" class="modal review-modal" aria-labelledby="review-dialog-title">
+    <div class="modal-heading"><div><p id="review-room-name" class="eyebrow small-eyebrow">The reading room</p><h2 id="review-dialog-title">What comes to mind?</h2></div><button class="icon-button" type="button" data-action="close-dialog" aria-label="Close review"><svg aria-hidden="true"><use href="#icon-close"/></svg></button></div>
+    <div class="review-progress-line"><span id="review-progress">Review queue</span><span id="review-card-status"></span></div><progress id="review-progress-bar" max="1" value="0" aria-label="Review queue progress"></progress>
+    <div class="review-paper"><p class="paper-label"><svg aria-hidden="true"><use href="#icon-book"/></svg>A little space for remembering</p><p id="review-prompt" class="cloze-text">Your question will appear here.</p><section id="answer-section" class="answer-section" aria-labelledby="answer-label" hidden><h3 id="answer-label">The phrase you kept</h3><p id="review-answer"></p></section></div>
+    <fieldset id="confidence-fieldset" class="confidence-fieldset"><legend>Before you look, how sure do you feel?</legend><div class="confidence-options"><label><input type="radio" name="confidence" value="unsure"><span>Not sure</span></label><label><input type="radio" name="confidence" value="maybe"><span>Somewhat</span></label><label><input type="radio" name="confidence" value="confident"><span>Confident</span></label></div></fieldset>
+    <button class="button button-primary button-full" id="reveal-answer" type="button" data-action="reveal-answer" disabled>Reveal the answer <svg aria-hidden="true"><use href="#icon-arrow"/></svg></button>
+    <section id="rating-section" class="rating-section" aria-labelledby="rating-heading" hidden><h3 id="rating-heading">How well did you remember?</h3><div class="rating-options"><button type="button" data-action="rate-card" data-rating="again"><strong>Again</strong><span>In 10 minutes</span></button><button type="button" data-action="rate-card" data-rating="hard"><strong>Hard</strong><span>In 24 hours</span></button><button type="button" data-action="rate-card" data-rating="remembered"><strong>Remembered</strong><span id="remembered-interval">In 1 day</span></button></div></section>
+    <p id="review-feedback" class="review-feedback" role="status" aria-live="polite" hidden></p><p id="review-error" class="form-error" role="alert" hidden></p><button class="button button-primary button-full" id="next-card" type="button" data-action="next-card" hidden>Continue <svg aria-hidden="true"><use href="#icon-arrow"/></svg></button>
+  </dialog>
+
+  <dialog id="import-dialog" class="modal" aria-labelledby="import-title">
+    <div class="modal-heading"><div><p class="eyebrow small-eyebrow">Bring your memories home</p><h2 id="import-title">Restore a backup.</h2></div><button class="icon-button" type="button" data-action="close-dialog" aria-label="Close restore backup"><svg aria-hidden="true"><use href="#icon-close"/></svg></button></div>
+    <p class="modal-intro">Choose a Recall Mansion JSON backup. We'll check it before making any changes.</p><label class="file-label" for="backup-file"><svg aria-hidden="true"><use href="#icon-import"/></svg><strong>Choose your backup file</strong><span>Recall Mansion .json</span><input id="backup-file" type="file" accept="application/json,.json"></label><div id="import-summary" class="import-summary" aria-live="polite" hidden></div><p class="import-warning">Restoring replaces the notes, cards, and review history currently saved in this browser. Export them first if you want to keep both copies.</p><p id="import-error" class="form-error" role="alert" hidden></p><div class="modal-actions"><button class="button button-quiet" type="button" data-action="close-dialog">Cancel</button><button class="button button-primary" id="confirm-import" type="button" data-action="confirm-import" disabled>Replace with this backup</button></div>
+  </dialog>
+
+  <dialog id="how-it-works-dialog" class="modal" aria-labelledby="method-title">
+    <div class="modal-heading"><div><p class="eyebrow small-eyebrow">A guide to the mansion</p><h2 id="method-title">Small returns. More light.</h2></div><button class="icon-button" type="button" data-action="close-dialog" aria-label="Close the study guide"><svg aria-hidden="true"><use href="#icon-close"/></svg></button></div>
+    <ol class="method-steps"><li><span>01</span><div><h3>Give a note a room.</h3><p>Paste a note and select the exact phrases you want to remember. Each phrase becomes the answer to a blank in your note.</p></div></li><li><span>02</span><div><h3>Recall before you reveal.</h3><p>Try to fill the blank in your mind. Choose how confident you feel, reveal the phrase, and honestly rate how well you remembered it.</p></div></li><li><span>03</span><div><h3>Follow the little ghosts.</h3><p>A ghost count means cards are due now. Finish a room's review queue and its window lights up. The next visit is scheduled from your rating.</p></div></li></ol>
+    <div class="method-caveat"><h3>A simple practice rhythm</h3><p>Again returns in 10 minutes. Hard returns in 24 hours. Remembered moves through 1, 3, 7, 14, then 30 days. These are simple scheduling rules, not a measurement or prediction of your memory. Confidence helps you notice surprises; it doesn't change the schedule.</p><p>Your selections create the questions. No AI model reads your notes. Data stays in this browser, so keep a backup before clearing browser storage or changing devices.</p></div><div class="modal-actions"><button class="button button-primary" type="button" data-action="close-dialog">Make yourself at home <svg aria-hidden="true"><use href="#icon-arrow"/></svg></button></div>
+  </dialog>
+
+  <template id="room-card-template"><button class="room-card" type="button" data-action="open-room" data-state="empty"><span class="room-window" aria-hidden="true"><span class="window-arch"></span><span class="window-panes"></span><svg class="window-ghost"><use href="#icon-ghost"/></svg></span><span class="room-card-body"><span class="room-card-kicker">A room in your mansion</span><strong class="room-card-title"></strong><span class="room-card-meta"></span><span class="room-card-state"></span></span><span class="room-card-arrow" aria-hidden="true">↗</span></button></template>
+</body>
+</html>

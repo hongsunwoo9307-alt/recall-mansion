@@ -1,0 +1,13 @@
+{
+  "name": "recall-mansion",
+  "version": "0.1.0",
+  "description": "Kiroween 2026 — spaced-repetition study tool with a haunted mansion metaphor",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/core.test.js tests/store.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

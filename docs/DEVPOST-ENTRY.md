@@ -1,6 +1,6 @@
 # Recall Mansion — Devpost entry copy
 
-Prepared November 13, 2026 (Asia/Seoul) from the implemented application and recorded verification. The Devpost draft is saved and ready for the final submission decision. Sections labeled as field copy contain the English entry text; verified publication links and final form status appear below.
+Prepared November 13, 2026 (Asia/Seoul) from the implemented application and recorded verification. **Final submission is complete.** [View the submitted Devpost project](https://devpost.com/software/recall-mansion). Sections labeled as field copy contain the English entry text; verified publication links and submission status appear below.
 
 ## Project name
 
@@ -94,7 +94,7 @@ Recall Mansion was started on November 12, 2026 for Kiroween 2026. It is a new p
 
 ## Bonus selection
 
-No additional eligibility-based or publishing-based bonus is claimed by this draft. Best Demo requires no additional submission step. Do not claim student, startup, Kiro Crew, previous-Kiroween, social-post, or blog-post eligibility without the corresponding facts and artifacts.
+No additional eligibility-based or publishing-based bonus is claimed by this entry. Best Demo requires no additional submission step. Do not claim student, startup, Kiro Crew, previous-Kiroween, social-post, or blog-post eligibility without the corresponding facts and artifacts.
 
 ## Link fields and publication handoff
 
@@ -103,10 +103,10 @@ No additional eligibility-based or publishing-based bonus is claimed by this dra
 | Application | https://recall-mansion-hj.hongsunwoo9307.chatgpt.site — public; anonymous HTTP requests returned 200 for the root and `lib/core.js`. |
 | Public GitHub source | https://github.com/hongsunwoo9307-alt/recall-mansion — initial verified publication: 27 files at commit `02ed114be2f806b259442622a5909e36df598e16`; root `.kiro` and tests are browsable, and GitHub detects MIT. |
 | Public YouTube demonstration | https://youtu.be/umx3xHVfUm8 — published Public; 117.86 seconds, 1080p H.264/AAC. Playback and changing English captions were verified in the Devpost embed. |
-| Devpost draft preview | https://devpost.com/software/recall-mansion — overview, project details, and additional information saved. Preview verified with the English story, three screenshots, video, and app/source links. |
-| Devpost draft editor | https://devpost.com/submit-to/31667-kiroween-2026/manage/submissions/1298833-recall-mansion/project_details/edit |
+| Submitted Devpost project | https://devpost.com/software/recall-mansion — submitted to Kiroween 2026 on November 13, 2026 (KST). The English story, three screenshots, video, and app/source links were verified before submission. |
+| Devpost submission editor | https://devpost.com/submit-to/31667-kiroween-2026/manage/submissions/1298833-recall-mansion/project_details/edit |
 
-The finalization page shows **4/5 steps complete**, which is expected with the final submission step remaining. **Submit project** is available and the final terms checkbox is unchecked. No final hackathon submission has been made.
+After the owner's final submission request, the terms checkbox was accepted and **Submit project** was clicked. Devpost displayed **“Project submitted!”** and **“Submitted to Kiroween 2026”** on the public project page. Final submission is complete; editing remains available until the official deadline.
 
 ## Saved additional information
 

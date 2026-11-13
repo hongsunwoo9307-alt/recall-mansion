@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:10,200
+Saving a note is easy. Returning is harder. Recall Mansion turns notes into rooms. Ghosts show which cards are due.
+
+2
+00:00:10,200 --> 00:00:19,920
+I create a room for a short note about the Moon. Notes stay in this browser. No account or external AI service is required.
+
+3
+00:00:19,920 --> 00:00:29,920
+I choose reflects sunlight as the phrase to remember. The preview shows what will be hidden. My selection creates the question.
+
+4
+00:00:29,920 --> 00:00:39,120
+A new card is immediately due. I choose confidence before revealing the answer, keeping my expectation separate from the result.
+
+5
+00:00:39,120 --> 00:00:50,520
+After revealing, I rate my recall. Again returns in ten minutes. Hard returns in one day. Remembered advances through a simple schedule.
+
+6
+00:00:50,520 --> 00:01:00,520
+Here I choose Again. The app saves one review and its real next due time, without pretending that ten minutes have passed.
+
+7
+00:01:00,520 --> 00:01:11,680
+With nothing currently due, the window lights up. Confident followed by Again gets a second look. This records my judgment, not a memory score.
+
+8
+00:01:11,680 --> 00:01:24,040
+I export a JSON backup. Import checks it before I explicitly choose to replace saved data. Otherwise, clearing browser storage removes local notes.
+
+9
+00:01:24,040 --> 00:01:35,920
+Kiro generated the requirements, design, and tasks. These are the actual files. The repository preserves the Kiro folder and an honest contribution record.
+
+10
+00:01:35,920 --> 00:01:48,760
+Kiro implemented the study core and tests. Codex built the interface and reviewed integration. All seventy three tests pass, including regressions from browser testing.
+
+11
+00:01:48,760 --> 00:01:57,840
+A small note, an honest check, and a reason to return. Recall Mansion gives a useful study routine a haunted home.

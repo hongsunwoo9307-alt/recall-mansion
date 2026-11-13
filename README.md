@@ -4,13 +4,15 @@
 
 Recall Mansion turns plain-text notes into rooms in a haunted library. Choose an exact phrase to hide, try recalling it, and decide when to return. Ghost counts show cards that are actually due; a lit window means a room has no reviews waiting.
 
-A new project for **Kiroween 2026**, started November 12, 2026. Intended category: **Costume Contest**. This repository is a working prototype, not a claim of final hackathon submission.
+A new project for **Kiroween 2026**, started November 12, 2026 and submitted on November 13, 2026 (KST) in **Costume Contest**. [View the submitted Devpost project](https://devpost.com/software/recall-mansion).
 
 Source: [hongsunwoo9307-alt/recall-mansion](https://github.com/hongsunwoo9307-alt/recall-mansion). The public source package omits the owner's private hosting configuration; `dist/` contains the complete application and can be hosted independently.
 
 [Open the public web app](https://recall-mansion-hj.hongsunwoo9307.chatgpt.site/). No login is required. Desktop and mobile-sized browser layouts are supported; physical iOS/Android devices have not yet been tested.
 
 [Watch the 1:58 English demonstration](https://youtu.be/umx3xHVfUm8). The video is an edited walkthrough of actual application and Kiro source screens, with English captions and synthesized narration.
+
+[English subtitle file](docs/Recall-Mansion-demo.en.srt).
 
 ## Try the study flow
 
@@ -62,7 +64,7 @@ See [the contribution record](docs/KIRO-EVIDENCE.md), [the integration contract]
 
 ## Entry status
 
-The prototype is implemented and 73 core/storage tests pass. Participant registration was completed on November 13, 2026 (KST), with the owner's eligibility and terms confirmation. The application, complete GitHub source, and demonstration video are public. The English Devpost draft is saved through the final submission screen (4/5 steps). Final project submission remains separate.
+The prototype is implemented and 73 core/storage tests pass. Participant registration and final project submission were completed on November 13, 2026 (KST), with the owner's eligibility and terms confirmation. Devpost displayed **“Project submitted!”** and lists the project under **“Submitted to Kiroween 2026.”** The application, complete GitHub source, and demonstration video are public. [View the submitted entry](https://devpost.com/software/recall-mansion).
 
 Official deadline: **December 5, 2026, 07:00 KST** (December 4, 14:00 PST). Competition details: [Kiroween](https://kiroween.devpost.com/), [official rules](https://kiroween.devpost.com/rules), and [resources](https://kiroween.devpost.com/resources).
 

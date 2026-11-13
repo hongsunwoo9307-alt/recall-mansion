@@ -39,4 +39,8 @@ The public English demonstration at https://youtu.be/umx3xHVfUm8 is 117.86 secon
 
 This is a prototype check, not a full accessibility audit or a claim of support for every browser. Valid import round trips and persistence replacement were covered at module level; the browser's invalid-import gate and export download were exercised. Browser storage quota and damaged-data paths were tested with injected storage adapters. Simultaneous edits across tabs are not protected by an atomic lock. No runtime AI, cloud sync, or payment integration is present.
 
-The hosted site has a different origin from localhost, so local test notes are not transferred automatically. The application and source are public; final hackathon submission remains separate.
+The hosted site has a different origin from localhost, so local test notes are not transferred automatically. The application and source are public.
+
+## Final submission — November 13, 2026
+
+After the owner's final submission request, the final terms were accepted and **Submit project** was clicked. Devpost displayed **“Project submitted!”** and listed **Kiroween 2026** under **Submitted to** on the [public project page](https://devpost.com/software/recall-mansion). Final submission is complete.
